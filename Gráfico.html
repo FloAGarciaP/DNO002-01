@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gráficos de barra con CSS Grid</title>
+  <style>
+    .parent { display: grid; grid-template-columns: repeat(2, 1fr); }
+  </style>
+</head>
+<body>
+  <h1>Porcentaje de sexo en natalidad — noviembre 2025</h1>
+
+  <svg width="100%" height="100%" viewBox="0 0 42 42" class="donut">
+
+    <!-- Hueco blanco del centro -->
+    <circle class="donut-hole"
+            cx="21" cy="21" r="15.91549430918954"
+            fill="#fff">
+    </circle>
+
+    <!-- Anillo gris de fondo -->
+    <circle class="donut-ring"
+            cx="21" cy="21" r="15.91549430918954"
+            fill="transparent"
+            stroke="#d2d3d4"
+            stroke-width="3">
+    </circle>
+
+    <!-- Hombres: 50.7% -->
+    <circle class="donut-segment"
+            cx="21" cy="21" r="15.91549430918954"
+            fill="transparent"
+            stroke="#377bbc"
+            stroke-width="3"
+            stroke-dasharray="50.7 49.3"
+            stroke-dashoffset="25">
+    </circle>
+
+    <!-- Mujeres: 49.3% -->
+    <circle class="donut-segment"
+            cx="21" cy="21" r="15.91549430918954"
+            fill="transparent"
+            stroke="#ce4b99"
+            stroke-width="3"
+            stroke-dasharray="49.3 50.7"
+            stroke-dashoffset="74.3">
+    </circle>
+
+  </svg>
+
+  <div class="leyenda">
+    <div class="leyenda-item">
+      <div class="punto" style="background:#377bbc"></div>
+      Hombres — 50,7%
+    </div>
+    <div class="leyenda-item">
+      <div class="punto" style="background:#ce4b99"></div>
+      Mujeres — 49,3%
+    </div>
+  </div>
+
+</body>
+</html>
